@@ -70,6 +70,45 @@ class ETZ {
     
         return $history;
     }
+
+    // Get setting data.
+    public function getPatientSetting($user_id) {
+        $query = 'SELECT status, brightness, volume  FROM `patient` WHERE user_id = ?';
+        $stmt = $this->db->prepare($query);
+        if ($stmt === false) {
+            throw new Exception('Prepare failed: ' . $this->db->error);
+        }
+        
+        $stmt->bind_param('i', $user_id);
+        if ($stmt->execute() === false) {
+            $stmt->close();
+            throw new Exception('Execute failed: ' . $stmt->error);
+        }
     
+        $result = $stmt->get_result();
+        if ($result === false) {
+            $stmt->close();
+            throw new Exception('Get result failed: ' . $stmt->error);
+        }
+    
+        $settings = [];
+        while ($row = $result->fetch_assoc()) {
+            $settings[] = [
+                'status' => $row['status'],
+                'brightness' => (int)$row['brightness'],
+                'volume' => (int)$row['volume']
+            ];
+        }
+        $result->free();
+        $stmt->close();
+    
+        return $settings;
+    }
+    
+
+    // Update setting data.
+    public function updateSetting() {
+
+    }
 }
 ?>
