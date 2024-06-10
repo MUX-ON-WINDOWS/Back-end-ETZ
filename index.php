@@ -107,8 +107,23 @@ class ETZ {
     
 
     // Update setting data.
-    public function updateSetting() {
-
+    public function updateSetting($user_id, $brightness, $volume) {
+        $query = 'UPDATE `patient` SET volume = ?, brightness = ? WHERE user_id = ?';
+        $stmt = $this->db->prepare($query);
+        if ($stmt === false) {
+            throw new Exception('Prepare failed: ' . $this->db->error);
+        }
+        
+        $stmt->bind_param('iii', $volume, $brightness, $user_id);
+        if ($stmt->execute() === false) {
+            $stmt->close();
+            throw new Exception('Execute failed: ' . $stmt->error);
+        }
+        
+        $stmt->close();
+    
+        return true; // Return true to indicate success
     }
+    
 }
 ?>
