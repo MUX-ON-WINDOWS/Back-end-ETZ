@@ -14,7 +14,6 @@ if (empty($user_id)) {
 }
 
 try {
-    // Assuming history is a method in the ETZ class
     $settingPatient = $getdataHistory->getPatientSetting($user_id);
 
     if ($settingPatient) {
