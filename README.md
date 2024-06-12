@@ -14,7 +14,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `email` (string): User's email address.
      - `password` (string): User's password.
    - Returns:
-     - `token` (string): Authentication token for the user session.
+     - `token` (JSON): Authentication for the user session.
 
 2. **history:**
    - Endpoint: `/history`
@@ -42,7 +42,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `patient_id` (string): ID of the patient whose settings are to be updated.
      - `new_settings` (JSON): New settings data to be updated.
    - Returns:
-     - `status` (string): Success or failure message.
+     - `status` (JSON): Success or failure message.
 
 5. **getVerwantSettings:**
    - Endpoint: `/verwant/settings`
@@ -61,13 +61,14 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `verwant_id` (string): ID of the relative whose settings are to be updated.
      - `new_settings` (JSON): New settings data to be updated.
    - Returns:
-     - `status` (string): Success or failure message.
+     - `status` (JSON): Success or failure message.
 
 ### Setup Instructions:
 1. Clone the repository.
-2. Install dependencies using `npm install`.
-3. Configure environment variables (if applicable).
-4. Start the server using `npm start`.
+2. Launch Xampp or other localhost programms.
+3. Select the cloned repository.
+4. Go to your localhost URL.
+5. Enter your crendentials in URL.
 
 ### Usage:
 - Make API requests to the respective endpoints with required parameters.
