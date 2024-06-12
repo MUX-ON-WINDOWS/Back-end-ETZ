@@ -7,7 +7,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
 ### Function Descriptions:
 
 1. **login:**
-   - Endpoint: `/login`
+   - Endpoint: `/login.php?username=?&password=?`
    - Description: Authenticates a user based on email and password.
    - Method: POST
    - Parameters:
@@ -17,7 +17,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `token` (JSON): Authentication for the user session.
 
 2. **history:**
-   - Endpoint: `/history`
+   - Endpoint: `/history.php?user_id=?`
    - Description: Retrieves the history of a patient's interactions, including details from related entities.
    - Method: GET
    - Parameters:
@@ -26,7 +26,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `history_data` (JSON): History data including interaction details.
 
 3. **getPatientSetting:**
-   - Endpoint: `/patient/settings`
+   - Endpoint: `settingpatient.php/user_id`
    - Description: Retrieves settings for a patient.
    - Method: GET
    - Parameters:
@@ -35,7 +35,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `settings_data` (JSON): Patient settings data.
 
 4. **updateSetting:**
-   - Endpoint: `/patient/settings`
+   - Endpoint: `/updatesetting.php?brightness=?&volume=?`
    - Description: Updates settings for a patient.
    - Method: POST
    - Parameters:
@@ -45,7 +45,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `status` (JSON): Success or failure message.
 
 5. **getVerwantSettings:**
-   - Endpoint: `/verwant/settings`
+   - Endpoint: `/getverwantsettings.php?user_id=?`
    - Description: Retrieves settings for a relative.
    - Method: GET
    - Parameters:
@@ -54,7 +54,7 @@ This repository contains the backend API for ETZ (Example Treatment Zone). The A
      - `settings_data` (JSON): Relative settings data.
 
 6. **updateVerwantSettings:**
-   - Endpoint: `/verwant/settings`
+   - Endpoint: `/updateverwantsettings.php?color=?&sound=?`
    - Description: Updates settings for a relative.
    - Method: POST
    - Parameters:
