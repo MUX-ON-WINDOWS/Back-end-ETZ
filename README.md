@@ -1,4 +1,4 @@
-**Back-end-ETZ API**
+## Back-end-ETZ API
 
 This repository contains the backend API for ETZ (Example Treatment Zone). The API serves various functions related to user authentication, patient data retrieval, and settings management.
 
