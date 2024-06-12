@@ -1,5 +1,7 @@
 ## Back-end-ETZ API
 
+[![My Skills](https://skillicons.dev/icons?i=php)](https://skillicons.dev)
+
 This repository contains the backend API for ETZ (Example Treatment Zone). The API serves various functions related to user authentication, patient data retrieval, and settings management.
 
 ### Function Descriptions:
