@@ -8,7 +8,10 @@ ini_set('display_errors', 1);
 header('Cache-Control: no-cache, must-revalidate');
 header('Content-type: application/json');
 
-
+$host = "rdbms.strato.de";
+$username = "dbu1032517";
+$password = "Password1234!";
+$database = "dbs12945069";
 
 $conn = new mysqli($host, $username, $password, $database);
 
